@@ -7,6 +7,12 @@
 
 		public function index(){
 
+			session_start();
+
+			if (!isset($_SESSION["id"])) {
+				header("Location: /PHP/app_MVC/login");	
+			}
+
 			$pagina = new pagina();
 			$dados['pagina'] = $pagina->getPagina();
 
@@ -35,6 +41,8 @@
 
 		public function add(){
 
+			$dados = array();
+
 			$this->loadTemplate('add', $dados);
 			
 			if(isset($_POST['nome']) && !empty($_POST['nome'])){
@@ -48,6 +56,8 @@
 		}
 
 		public function editar(){
+
+			$dados = array();
 
 			$this->loadTemplate('editar', $dados);
 

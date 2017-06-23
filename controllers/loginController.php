@@ -4,6 +4,8 @@
 
 		public function index(){
 
+			$dados = array();
+
 			$this->loadTemplate('login', $dados);
 
 			session_start();

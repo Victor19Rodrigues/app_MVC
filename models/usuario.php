@@ -1,4 +1,4 @@
-<?php
+1<?php
 	
 	/**
 	 * Classe que toma conta do acesso de usuários
