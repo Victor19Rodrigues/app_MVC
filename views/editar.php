@@ -17,13 +17,13 @@
 				<div class="card card-container">
 
 					<!-- Form Name -->
-					 <h1 class="welcome text-center">Alterar Funcionário</h1>
+					 <h1 class="welcome text-center">Alterar Informações</h1>
 
 					<!-- Text input-->
 					<div class="form-group">
 					  <label class="col-md-4 control-label" for="idNome">Nome</label>  
 					  <div class="col-md-5">
-					  <input id="idNome" name="nome" type="text" placeholder="Nome do funcionário" class="form-control input-md" required="">
+					  <input id="idNome" name="nome" type="text" placeholder="Digite o nome" class="form-control input-md" required="">
 					    
 					  </div>
 					</div>
@@ -33,6 +33,15 @@
 					  <label class="col-md-4 control-label" for="idUsuario">Email</label>  
 					  <div class="col-md-5">
 					  <input id="idUsuario" name="email" type="text" placeholder="Digite o email" class="form-control input-md" required="">
+					    
+					  </div>
+					</div>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="col-md-4 control-label" for="idTel">Telefone</label>  
+					  <div class="col-md-5">
+					  <input id="idTel" name="tel" type="text" placeholder="Digite o telefone" class="form-control input-md" required="">
 					    
 					  </div>
 					</div>

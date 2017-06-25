@@ -48,10 +48,10 @@
 			if(isset($_POST['nome']) && !empty($_POST['nome'])){
 				$nome = addslashes($_POST['nome']);
 				$email = addslashes($_POST['email']); //proteção
-				$senha = addslashes($_POST['senha']);
+				$tel = addslashes($_POST['tel']);
 
 				$acao = new acao();
-				$acao->add($nome, $email, $senha);	
+				$acao->add($nome, $email, $tel);	
 			}
 		}
 
@@ -71,9 +71,10 @@
 			if(isset($_POST['nome']) && !empty($_POST['nome'])){
 				$nome = addslashes($_POST['nome']);
 				$email = addslashes($_POST['email']);
+				$tel = addslashes($_POST['tel']);
 
 				$acao = new acao();
-				$acao->editar($nome, $email, $id);
+				$acao->editar($nome, $email, $tel, $id);
 
 			}	
 
@@ -90,6 +91,21 @@
 			}else{
 				header("Location: /PHP/app_MVC/home");
 			}
-		}						
+		}
+
+		public function pesquisa(){
+			
+			if(isset($_POST['palavra']) && !empty($_POST['palavra'])){
+				$nome = $_POST['palavra'];
+
+				$acao = new acao();
+				$dados['acao'] = $acao->pesquisa($nome);
+
+				$this->loadTemplate('pesquisa', $dados);
+
+			}else{
+				header("Location: /PHP/app_MVC/home");
+			}
+		}								
 	}
 ?>
