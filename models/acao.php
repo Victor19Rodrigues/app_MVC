@@ -27,7 +27,7 @@
 
 		public function pesquisa($nome){
 
-			$sql = "SELECT * FROM usuario WHERE nome LIKE '$nome%'";
+			$sql = "SELECT * FROM usuario WHERE nome LIKE '$nome%' ORDER BY nome ASC";
 			$sql = $this->db->query($sql);
 
 			$array = array();

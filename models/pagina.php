@@ -13,7 +13,7 @@
 
 			$array = array();
 
-			$sql = "SELECT * FROM usuario";
+			$sql = "SELECT * FROM usuario ORDER BY nome ASC";
 			$sql = $this->db->query($sql);
 
 			if($sql->rowCount() > 0){
